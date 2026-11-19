@@ -30,7 +30,7 @@ palette taken off the rendered page — not guessed from a picture.
 | **Transport** | Streamable HTTP |
 | **Auth** | OAuth 2.1 with PKCE, dynamic client registration |
 | **Registry name** | `gallery.a1/a1-gallery` |
-| **Tools** | 21 — 19 read-only, 2 that change your own boards |
+| **Tools** | 23 · 21 read-only, 2 that change your own boards |
 
 Access is free with an A1 account — 50 tool calls a day. [A1 Pro](https://www.a1.gallery/pricing)
 raises that to 2,000 a day with a higher per-minute allowance.
@@ -133,15 +133,22 @@ codex mcp add a1 --url https://www.a1.gallery/api/mcp
 
 ## Tools
 
-19 tools are read-only and annotated `readOnlyHint: true`. Two board tools, `save_to_board` and `remove_from_board`, change the signed-in person’s own boards and nothing else.
+21 tools are read-only and annotated `readOnlyHint: true`. Two board tools, `save_to_board` and `remove_from_board`, change the signed-in person’s own boards and nothing else.
+
+### Start here
+
+| Tool | What it does |
+|---|---|
+| `get_design_brief` | One call for a brief like "dental clinic homepage": 5 real example sites with their measured design, plus the type sizes, widths, radius, fonts and accent colours sites like it use. |
+| `compare_websites` | 2 to 4 sites side by side on their measured fonts, sizes, width, radius and colours. |
 
 ### Websites
 
 | Tool | What it does |
 |---|---|
-| `search_websites` | Keyword search across names, descriptions and taxonomy. Resolves aliases — "SaaS", "fintech", "brutalist" map to real taxonomy terms. |
+| `search_websites` | Keyword search across names, descriptions and taxonomy, with the first 3 screenshots inline. Resolves aliases: "SaaS", "fintech", "brutalist" map to real taxonomy terms. |
 | `browse_websites` | Filter-only browsing by type, category, style, technology or colour. |
-| `get_website` | Everything for one site: fonts, colours, styles, technologies, creator, sections. |
+| `get_website` | Everything for one site: fonts, colours, styles, technologies, creator, sections, and a summary of its measured design. Takes a slug, name or domain. |
 | `get_similar_websites` | Inspiration clusters around a given site. |
 | `get_recently_added` | Newest additions, publish-date descending. |
 | `get_design_filters` | The full taxonomy with counts — use it to build valid filters. |
@@ -168,7 +175,7 @@ codex mcp add a1 --url https://www.a1.gallery/api/mcp
 |---|---|
 | `browse_fonts` | Fonts by classification, licence, or the category of site using them. |
 | `get_font` | One font — classification, licence, description, usage count. |
-| `find_font_pairings` | Real-world examples of two fonts used together. |
+| `find_font_pairings` | Real-world examples of two fonts used together. Give one font to see what real sites pair it with. |
 | `browse_creators` | Designers and studios, filterable by category or style. |
 | `get_creator` | One creator: bio, links, featured work. |
 
@@ -187,7 +194,7 @@ Full descriptions, parameters and response shapes come back from `tools/list`.
 
 ## Plugin
 
-Installing the connector gives an agent 21 tools. It does not tell the agent that
+Installing the connector gives an agent 23 tools. It does not tell the agent that
 `analyze_design_tokens` answers "how big should this be" better than five screenshots, or
 that a `lowSample` flag means stop generalising. The plugin carries that.
 

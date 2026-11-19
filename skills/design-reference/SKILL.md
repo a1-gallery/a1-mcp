@@ -14,6 +14,8 @@ Pick the tool by the shape of the question.
 
 | Question | Tool |
 |---|---|
+| "I'm designing a dental clinic homepage" (an open brief) | `get_design_brief` |
+| "Which of these two sites should I follow?" | `compare_websites` |
 | "What type scale do agency heroes use?" | `analyze_design_tokens` |
 | "What do portfolio FAQs ask about?" | `analyze_section_content` |
 | "Show me dark fintech heroes" | `search_sections` |
