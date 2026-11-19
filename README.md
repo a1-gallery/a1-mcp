@@ -47,13 +47,13 @@ and a research sub-agent. It teaches the agent how to use the gallery, which the
 connector does not.
 
 ```bash
-/plugin install a1-gallery --marketplace bryntay/a1-mcp
+/plugin install a1-gallery --marketplace a1-gallery/a1-mcp
 ```
 
 On Claude Code before 2.1.275, add the marketplace first:
 
 ```bash
-claude plugin marketplace add bryntay/a1-mcp
+claude plugin marketplace add a1-gallery/a1-mcp
 claude plugin install a1-gallery
 ```
 
@@ -233,5 +233,5 @@ hosted at a1.gallery.
 
 ## Support
 
-Issues and questions: [open an issue](https://github.com/bryntay/a1-mcp/issues) or email
+Issues and questions: [open an issue](https://github.com/a1-gallery/a1-mcp/issues) or email
 hello@a1.gallery.
