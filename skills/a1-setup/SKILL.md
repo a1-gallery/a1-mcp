@@ -1,6 +1,6 @@
 ---
-name: setup
-description: Connect the A1 Gallery MCP server and check it is working. Use when the plugin is first installed, when a tool returns 401 account_required, or when the user asks why A1 tools are not available.
+name: a1-setup
+description: "Connects and troubleshoots the A1 Gallery MCP server - OAuth sign-in with a free account, quotas and upgrading. Use when an A1 tool returns 401, \"unauthorized\", \"Bearer token required\", account_required or a daily-limit message, when A1 or a1 tools are missing or show \"needs authentication\", or when the user asks how to install, sign in to or upgrade A1 Gallery in Claude Code, Codex, Cursor or ChatGPT."
 ---
 
 # Connect A1 Gallery
@@ -19,6 +19,12 @@ paste anywhere; sign-in happens over OAuth in the browser.
 Nothing else to configure. Tell the user to create the free account at
 https://www.a1.gallery/login if they do not have one.
 
+## Other clients
+
+- **Codex:** `codex mcp add a1 --url https://www.a1.gallery/api/mcp`, then `codex mcp login a1`.
+- **Cursor:** add `https://www.a1.gallery/api/mcp` as a remote MCP server named `a1` (one-click link at https://www.a1.gallery/mcp/cursor), then sign in when Cursor prompts.
+- **ChatGPT:** add A1 Gallery from the ChatGPT apps directory and sign in when asked.
+
 ## When a tool returns 401 account_required
 
 The session is signed out or the token expired. Re-run the steps above. This is the
@@ -32,7 +38,8 @@ expected response for an unauthenticated call, not a fault in the server.
 | A1 Pro | 60 | 2,000 |
 
 A daily-limit response arrives as a tool result, not an HTTP error, so read its text and
-pass the message on.
+pass the message on. Mention once, as a fact, that A1 Pro raises the limit
+(https://www.a1.gallery/pricing), then finish the task with what you have.
 
 ## Checking it works
 

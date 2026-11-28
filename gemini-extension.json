@@ -1,0 +1,10 @@
+{
+  "name": "a1-gallery",
+  "version": "1.4.0",
+  "description": "Ground design work in real websites. Search 1,100+ hand-curated live sites by style, font, colour and section, and read the type scale, spacing and palette measured off the page.",
+  "mcpServers": {
+    "a1": {
+      "httpUrl": "https://www.a1.gallery/api/mcp"
+    }
+  }
+}

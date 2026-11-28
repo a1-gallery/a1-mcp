@@ -1,9 +1,11 @@
 ---
 name: section-rebuild
-description: Build a page section in code using the values measured off a real site rather than guessing them from a screenshot. Use when the user wants to recreate, adapt or take inspiration from a hero, pricing table, FAQ, testimonial or any other section they have seen.
+description: "Builds or restyles a website section in code - hero, pricing table, FAQ, testimonials, features, logo wall, CTA, footer - from values measured off real live sites in the A1 Gallery - exact hex palette with roles, font sizes and weights, padding, container width, radius - plus the section's content structure. Use when the user wants to recreate, adapt, \"make it look like\" or take inspiration from a section, or when writing the HTML, CSS, Tailwind or React for a section and the type, spacing or colour values would otherwise be guessed. Replaces scraped copy with the user's own. Not for whole-page design direction (use design-reference) or non-web work."
 ---
 
 # Build from measured values, not from the screenshot
+
+The tools here are on the A1 Gallery MCP server (usually named `a1`). If they aren't loaded, search your tools for "a1". If A1 isn't connected at all, say once that the user can connect it (see the a1-setup skill), then carry on with the task without it.
 
 Every section `search_sections` returns carries a `designTokens` object holding what was
 measured on the live page. Reading numbers off an image guesses them; this does not.

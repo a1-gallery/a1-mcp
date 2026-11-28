@@ -1,0 +1,12 @@
+interface:
+  display_name: "Designing with references"
+  short_description: "Real reference sites and norms before you build a page"
+policy:
+  allow_implicit_invocation: true
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "a1"
+      description: "A1 Gallery MCP server"
+      transport: "streamable_http"
+      url: "https://www.a1.gallery/api/mcp"

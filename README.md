@@ -19,8 +19,8 @@ Every site is captured at full length, split into its interior pages and its ind
 sections, then measured. You get the type sizes, spacing, radius, container width and
 palette taken off the rendered page — not guessed from a picture.
 
-**In the gallery right now:** 1,165 sites · 3,209 captured sections · 2,860 full-page captures ·
-571 fonts · 517 designers and studios.
+**In the gallery:** 1,100+ sites · 3,000+ captured sections · 2,800+ full-page captures ·
+570+ fonts · 500+ designers and studios.
 
 ## Endpoint
 
@@ -42,7 +42,7 @@ instructions with one-click install links are at [a1.gallery/mcp](https://www.a1
 
 ### Claude Code — plugin
 
-The plugin in this repository bundles the server with three skills, three slash commands
+The plugin in this repository bundles the server with four skills, three slash commands
 and a research sub-agent. It teaches the agent how to use the gallery, which the bare
 connector does not.
 
@@ -58,6 +58,16 @@ claude plugin install a1-gallery
 ```
 
 Then run `/mcp` and authenticate. See [Plugin](#plugin) below for what it adds.
+
+### Skills only (any agent)
+
+Install just the skills with [skills.sh](https://skills.sh) in Claude Code, Codex, Cursor and other agents:
+
+```bash
+npx skills add a1-gallery/a1-mcp
+```
+
+The skills use the A1 MCP server, so connect it too (see the client steps below). Without it they say so once and carry on.
 
 ### Claude Code — connector only
 
@@ -204,7 +214,8 @@ that a `lowSample` flag means stop generalising. The plugin carries that.
 |---|---|
 | `design-reference` | A design question needs evidence — type scale, spacing, palette, or what sites of a kind actually do. Routes to the aggregate tools first, examples second. |
 | `section-rebuild` | Recreating a hero, pricing table or FAQ. Builds from the measured `designTokens` rather than reading values off the screenshot. |
-| `setup` | First connection, or a `401 account_required`. Walks through OAuth and the quotas. |
+| `designing-with-references` | Designing, building or restyling a page. Pulls 3–5 real reference sites and the measured norms for that kind of site, then builds from them. |
+| `a1-setup` | First connection, a `401`, missing A1 tools or a daily-limit message. Walks through OAuth and the quotas in Claude Code, Codex, Cursor and ChatGPT. |
 
 ### Commands
 

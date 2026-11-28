@@ -1,6 +1,8 @@
 ---
 name: reference
 description: Find real website reference for a design brief
+argument-hint: "<design brief, e.g. dark fintech landing page>"
+disable-model-invocation: true
 ---
 
 Find reference in A1 Gallery for: $ARGUMENTS

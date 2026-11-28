@@ -1,6 +1,8 @@
 ---
 name: pairings
 description: Find real sites using a font or font pairing
+argument-hint: "<font or two fonts, or a type brief>"
+disable-model-invocation: true
 ---
 
 Research type in A1 Gallery for: $ARGUMENTS

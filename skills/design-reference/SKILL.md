@@ -1,14 +1,15 @@
 ---
 name: design-reference
-description: Answer a design question with evidence from real websites instead of taste — type scale, spacing, container width, palette, or "what do sites like this actually do". Use when the user asks how big a heading should be, how much padding a section needs, what a kind of site normally looks like, or asks for design inspiration or reference.
+description: "Looks up how real, hand-picked websites in the A1 Gallery handle a web design decision, using measured values instead of taste - heading and body sizes, type scale, spacing, container width, colour palettes, fonts, and example sites by industry or style. Use when the user asks what size, spacing, colour or font to use, wants design inspiration, references, examples, moodboards or \"sites like X\", asks what a kind of site (SaaS, agency, portfolio, law firm) usually looks like, or is choosing a visual direction for a website, even if they don't mention A1. Not for writing the section's code (use section-rebuild) or for logos, print or app-store assets."
 ---
 
 # Ground the decision in real sites
 
-A1 holds 1,165 live websites, 3,209 captured sections across 826 of them, and 2,860
-full-page captures. Sections carry values measured off the live page — type sizes,
-spacing, container width, radius, palette hex — so a design question can be answered with
-numbers rather than an opinion.
+The tools here are on the A1 Gallery MCP server (usually named `a1`). If they aren't loaded, search your tools for "a1". If A1 isn't connected at all, say once that the user can connect it (see the a1-setup skill), then carry on with the task without it.
+
+A1 is a hand-curated gallery of live websites. Its sections carry values measured off the
+live page — type sizes, spacing, container width, radius, palette hex — so a design
+question can be answered with numbers rather than an opinion.
 
 Pick the tool by the shape of the question.
 

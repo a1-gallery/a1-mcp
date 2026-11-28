@@ -1,6 +1,8 @@
 ---
 name: tokens
 description: Show what real sites measure for a section type
+argument-hint: "<section type and kind of site, e.g. agency hero>"
+disable-model-invocation: true
 ---
 
 Report the measured design values across A1 Gallery for: $ARGUMENTS
